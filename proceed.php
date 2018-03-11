@@ -1,4 +1,11 @@
+<!doctype html>
+<html>
+<body>
+
 <?php 
+// set the PHP timelimit to 10 minutes
+set_time_limit(600);
+
 include __DIR__.'/stellar-api/vendor/autoload.php';
 
 use phpseclib\Math\BigInteger;
@@ -54,4 +61,12 @@ $server->buildTransaction($fromKeypair)
 
 // display OK msg
 echo "$cpt done OK. Temporary account was merged!<br>Lumen dividend process terminated.<br>" . PHP_EOL;
+
+session_destroy();
 ?>
+
+<p>
+	<a href="index.php">Back to the homepage</a>
+</p>
+</body>
+</html>

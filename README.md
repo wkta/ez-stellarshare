@@ -1,6 +1,9 @@
 # ez-stellarshare
 a simple "lumen dividend" payment service
 
+The current software is designed like an add-on on top of
+the stellar-api by "CryptoZulu" written in 2017 (c.f. the dedicated folder)
+
 ## how to use EZ-stellarshare?
 
 1.  you designate a custom asset existing on the Stellar network; its units will play the role of shares, just like in a company.
