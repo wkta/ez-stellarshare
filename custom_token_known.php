@@ -101,8 +101,14 @@ echo "Warning! Temporary account $temp_acc_publickey used for distribution will 
 <br><br>
 <font style="color:red; font-size:1em;">Proceed for payment?</font>
 
-<br>
-<button name="yes_button" onclick="location.href='proceed.php'">YES</button>
+<br><br>
+<button name="yes_button" onclick="location.href='proceed.php'">YES</button>&nbsp; &nbsp; &nbsp;
 <button name="no_button"  onclick="location.href='index.php'">NO</button>
+
+<p>
+Important notice: if you proceed, the next page may take several minutes to load.
+This is due the iterated interaction with the Stellar Horizon Server.<br>
+Please be patient, do not reload the webpage or close browser!
+</p>
 
 </html>
