@@ -1,33 +1,41 @@
 # ez-stellarshare
 a simple "lumen dividend" payment service
 
-The current software is designed like an add-on on top of
-the stellar-api by "CryptoZulu" written in 2017 (c.f. the dedicated folder)
+The current software takes the form of an add-on built on top of
+the PHP stellar-api by "CryptoZulu" ver. 0.6.0 (c.f. the dedicated folder).
+You need composer to complete this sub-folder with all its dependencies.
+
 
 ## how to use EZ-stellarshare?
 
-1.  you designate a custom asset existing on the Stellar network; its units will play the role of shares, just like in a company.
+1.  you designate a token (or custom asset) existing on the Stellar network; its units will play the role of shares, just like in a company.
 Optionally you specify a blacklist (1…N stellar accounts to be ignored)
 2.  you provide a temporary Stellar account containing funds (lumen) you wish to distribute,
-3.  the software takes care of paying the lumen dividend, that is the lumen amount ought to be paid to each custom asset owner based on how much he/she owns.
+3.  the software takes care of paying the lumen dividend, that is the lumen amount ought to be paid to each token owner based on how much he/she owns.
+
 
 ## example
 
-Imagine EZ-stellarshare is already released.
-I would be the happy 1st user of EZ-stellarshare.
-Here's what I could do in a few clicks:
+Imagine I want to use EZ-stellarshare in order to distribute a free gift of 5XLM to all HUG token owners.
+Here's what I can do in a few clicks:
 
-1.  designate the HUG asset, issued by:
-GD5T6IPRNCKFOHQWT264YPKOZAWUMMZOLZBJ6BNQMUGPWGRLBK3U7ZNP,
- as the reference for evaluating shares. Blacklist one account:
-GCQUV7WA4SP3LNTRDOBSURENX6WA5JU7Q5B54Y5I2G4IRTGG2IZ6M72M
-since it's a distributing account. Sorry, no lumen for you Jed ;-)
-2.  provide the secret key for a temporary account that holds precisely 1000+1 XLM, if I wanna distribute 1000 XLM to all HUG owners. The +1 part represents a flat fee
-3.  press the "pay lumen dividend" button.
-Based on how much HUG each account owns, each account will receive a fraction of the 1000 XLM.
+1.  use Stellar.expert to lookup for the HUG token and copy-paste all token owners in a file owners1.txt
+2.  add the distributing account GCQUV7WA4SP3LNTRDOBSURENX6WA5JU7Q5B54Y5I2G4IRTGG2IZ6M72M to an ignore list in the form of the ignore_list1.txt file
+3.  designate the HUG token as the reference for evaluating shares and provide the secret key for a temporary account that holds precisely 5.0 + 1.0606 XLM. The +1.10606 part represents an amount consumed as service fees (EZ-stellarshare is an online service that requires a running HTTPS server).
+4.  press the "YES" button on the proceed.php page
+5.  based on how much HUG each account owns, each account will receive a fraction of the 4.995XLM that are being distributed.
 This account for example:
 GBJMOL4NXA75DJRPEQ6NUXPKAGQA36OSDGYGOV2FCBSHRSOG22XXGYQI
-currently holds 5.1333361 HUGs, that is ~18.667% of 27.5 HUGs,
-27.5 HUGs being the total supply minus what's ignored due to the blacklist.
-Thus, the GBJMOL…GYQI account will receive ~186.67 XLM.
-All the computation and payment to each asset owner are automated.
+has now 5.1333361 HUGs, whereas 29.500003 HUGs have been sold by the distributing account.
+Therefore, account GBJMOL…GYQI owns ~17.4011% of all HUG tokens sold.
+(in other words "tokens sold" equal total token supply minus what's owned by ignored accounts).
+Thus, the GBJMOL…GYQI account will receive ~0.870XLM
+
+This payment operation was done in practice on the Stellar network publicNet,
+on march 12th 2018 at approx. 10:22 AM (GMT).
+The temporary account I used was:
+GBLF43DBJMP7TPAQSAHXINGJDHOIHDCIK65X7N27CBZLLOI6ZTZRVIPY
+Check the payment log: 
+https://stellar.expert/explorer/public/account/GBLF43DBJMP7TPAQSAHXINGJDHOIHDCIK65X7N27CBZLLOI6ZTZRVIPY
+
+All computation and payment to each token owner are handled automatically.
