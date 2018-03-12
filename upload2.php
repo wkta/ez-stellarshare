@@ -27,9 +27,13 @@ else {
 	}
 
 	$_SESSION['kept'] = array_filter($_SESSION['owners'], "keep_acc");
-	echo "[OK] some accounts were ignored<br>\n";
-	var_dump($_SESSION['kept']);
-	echo "<br>\n<h2>Please designate the Asset (e.g. HUG or GTshare) playing the role of a share</h2>";
+	echo "<h2>[OK] list of accounts to be ignored is loaded. Kept accounts:</h2>\n";
+	
+	echo '<p style="font-family: Courier, monospace;">';
+	print_r($_SESSION['kept']);
+	echo '</p>';
+
+	echo "<br><br>\n<h2>Please designate the Asset (e.g. HUG or GTshare) playing the role of a share</h2>";
 	
 }
 // -------------- fin code PHP
@@ -41,7 +45,7 @@ else {
 		Asset code (this asset will play the role of a "share"):<br>
 		<input type="text" name="asset_code" value="GTshare" maxlength="12" size="12"><br>
 
-		Public addr. of the ISSUER:<br>
+		Public addr. of the asset ISSUER:<br>
 		<input type="text" name="issuer_id" value="" maxlength="56" size="56">
 
 		<h2>Please designate the private key of the temporary account holding Stellar lumens to be distributed.</h2>

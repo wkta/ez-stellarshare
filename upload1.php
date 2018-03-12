@@ -20,15 +20,21 @@ while ($line = fgets($fp)) {
 }
 fclose($fp);
 
-echo '[OK] token owners are now identified.';
-var_dump($_SESSION['owners']);
+echo '<h2>[OK] token owners are now identified.</h2>';
+
+echo '<p style="font-family: Courier, monospace;">';
+print_r($_SESSION['owners']);
+echo '</p>';
+
 echo'<br>';
+
 echo 'Please upload a .txt file listing accounts to ignore, separated by line breaks<br>';
 ?>
 
 	<form action="upload2.php" method="POST" enctype="multipart/form-data">
-		Select image to upload:
-		<input type="file" name="fileToUpload" id="fileToUpload">
+		Select the .txt file to upload:
+		<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+		
 		<input type="submit" value="Upload File" name="submit">
 	</form>
 </body>
