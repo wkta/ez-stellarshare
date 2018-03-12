@@ -64,7 +64,7 @@ $temp_acc = $server->getAccount($temp_acc_publickey);
 $xlm_quantity = $temp_acc->getNativeBalance();
 
 $MINIMUM_BALANCE = 1.0;
-$xlm_distrib_theory = $xlm_quantity - 0.005*$xlm_quantity - $MINIMUM_BALANCE;  // tiny fee
+$xlm_distrib_theory = $xlm_quantity - 0.01*$xlm_quantity - $MINIMUM_BALANCE;  // tiny fee
 
 // what shall we give to each token owner?
 $giveouts = array();

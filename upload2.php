@@ -45,15 +45,17 @@ else {
 		<input type="text" name="issuer_id" value="" maxlength="56" size="56">
 
 		<h2>Please designate the private key of the temporary account holding Stellar lumens to be distributed.</h2>
+
 		<p>
 		Warning! The temporary account's funds will all be spent to pay dividends,
 		the temporary account will then be automatically destroyed!
 		Be sure this account contains the right amount of XLM.
 		</p>
 	  
-		Private key of the temporary account containing XLM to be distributed:<br>
-		<input type="text" name="priv_key" value="" maxlength="56" size="56"><br>
-
+		<label for="priv_key">Private key of the temporary account containing XLM to be distributed:</label>
+		<input type="password" name="priv_key" id="priv_key" maxlength="56" size="56"><br><br>
+		
+		
 		<input type="submit" value="Submit">
 	
 	</form> 
