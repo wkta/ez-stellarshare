@@ -5,6 +5,9 @@ The current software takes the form of an add-on built on top of
 the PHP stellar-api by "CryptoZulu" ver. 0.6.0 (c.f. the dedicated folder).
 You need composer to complete this sub-folder with all its dependencies.
 
+**QUICK TIP**
+To use this service without installing, go to: https://gaudia-tech.com/ez-stellarshare
+
 
 ## how to use EZ-stellarshare?
 
