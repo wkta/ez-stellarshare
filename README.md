@@ -16,11 +16,11 @@ Optionally you specify a blacklist (1…N stellar accounts to be ignored)
 
 ## example
 
-Imagine I want to use EZ-stellarshare in order to distribute a free gift of 5XLM to all HUG token owners.
-Here's what I can do in a few clicks:
+Imagine I want to make a gift of 5 XLM to all HUG token owners.
+Thanks to the ez-stellarshare service, here's what I can do in a few clicks:
 
-1.  use Stellar.expert to lookup for the HUG token and copy-paste all token owners in a file owners1.txt
-2.  add the distributing account GCQUV7WA4SP3LNTRDOBSURENX6WA5JU7Q5B54Y5I2G4IRTGG2IZ6M72M to an ignore list in the form of the ignore_list1.txt file
+1.  Lookup the HUG token via stellar.expert to find who owns HUG tokens, copy-paste owners' adresses to a file owners0.txt
+2.  add the distributing account GCQUV7WA4SP3LNTRDOBSURENX6WA5JU7Q5B54Y5I2G4IRTGG2IZ6M72M to an ignore list in the form of the ignore_list0.txt file
 3.  designate the HUG token as the reference for evaluating shares and provide the secret key for a temporary account that holds precisely 5.0 + 1.0606 XLM. The +1.10606 part represents an amount consumed as service fees (EZ-stellarshare is an online service that requires a running HTTPS server).
 4.  press the "YES" button on the proceed.php page
 5.  based on how much HUG each account owns, each account will receive a fraction of the 4.995XLM that are being distributed.
